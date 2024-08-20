@@ -1,0 +1,200 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi how are you
+    - hi there!
+    - hallo
+    - hello
+    - good morning
+    - good afternoon
+    - good day
+    - good evening
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_bad
+  examples: |
+    - not good
+    - bad
+    - I am sad
+    - everything sucks
+    - I am not good
+    - I am feeling very bad
+    - I am in a mess
+    - I am feeling blue
+    - super bad
+    - extremely sad
+    - so so sad
+    - so sad
+    - so bad
+
+
+- intent: goodbye
+  examples: |
+    - ciao
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see you next time
+
+
+- intent: interact_with_general_device
+  examples: |
+    - I want to switch on the light
+    - Turn on the light
+    - Turn on [Philips Hue lamp](light)
+    - Turn on [Hue lamp](light)
+    - Turn on [Philips Hue](light)
+    - Turn on [Philips lamp](light)
+    - Turn on [Philips Hue smart lamp](light)
+    - Switch on [Philips Hue lamp](light)
+    - Switch on [Hue lamp](light)
+    - Switch on [Philips Hue](light)
+    - Switch on [Philips lamp](light)
+    - Switch on [Philips Hue smart lamp](light)
+    - It's too dark here
+    - I can't see anything
+    - I need some light
+    - Switch on the light
+    - Please turn the light on
+    - Can you turn the light on?
+    - Switch off the light
+    - Turn off light
+    - Change light color to red
+    - Set light color to green
+    - I want blue in lamp
+    - Make the light orange
+    - Dim the brightness to half 
+    - Slowly decrease brightness to half
+
+
+- intent: interact_with_specific_device
+  examples: |
+    - I want to switch on the Philips Hue lamp in the IoT lab
+    - Turn on the hue lamp in the IoT lab
+    - Turn on the Philips Hue lamp in the IoT lab
+    - Switch on the Philips Hue lamp in the IoT lab
+    - Please switch the Philips Hue lamp in the IoT lab on
+    - Can you turn the Philips Hue lamp in the IoT lab on?
+    - Switch off the Philips Hue lamp in the IoT lab
+    - Turn off the lamp in the IoT lab
+    - I want to switch on the Philips Hue lamp in the meeting room
+    - Turn on the hue lamp in the meeting room
+    - Turn on the Philips Hue lamp in the meeting room
+    - Switch on the Philips Hue lamp in the meeting room
+    - Please switch the Philips Hue lamp in the meeting room on
+    - Can you turn the Philips Hue lamp in the meeting room on?
+    - Switch off the Philips Hue lamp in the meeting room 
+    - Turn off Philips Hue lamp in the meeting room
+    - Change Philips Hue lamp in the IoT lab color to red
+    - Set Philips Hue lamp in the IoT lab color to green
+    - I want blue in Philips Hue in the IoT lab
+    - Make Philips Hue lamp in the IoT lab color orange
+    - Switch color to red in Philips Hue lamp in the IoT lab
+    - Change Philips Hue lamp in the meeting room color to red
+    - Set Philips Hue lamp in the meeting room color to green
+    - I want blue in Philips Hue in the meeting room
+    - Make Philips Hue lamp in the meeting room color orange
+    - Switch color to red in Philips Hue lamp in the meeting room
+    - Dim Philips Hue lamp in the meeting room brightness to half
+    - Slowly decrease brightness of Philips Hue in meeting room to half
+    - Dim Philips Hue in the meeting room to half brightness 
+    - Dim Philips Hue lamp in the meeting room brightness to half
+    - Slowly decrease brightness of Philips Hue in meeting room to half
+    - Dim Philips Hue in the meeting room to half brightness 
+
+
+- intent: interact_with_connected_device
+  examples: |
+    - If stream deck button 1 is pressed, turn on hue lamp in the [IoT lab](location)
+    - When stream deck button 2 is pushed, switch on hue lamp in the [IoT lab](location)
+    - If stream deck button 3 is pressed, set color of hue lamp in the [IoT lab](location) to green
+    - Once stream deck button 4 is pressed, turn on hue lamp in the [meeting room](location)
+    - If stream deck button 5 is pushed, turn off hue lamp in the [meeting room](location)
+    - Whenever stream deck button 6 is pressed, turn on hue lamp in the [meeting room](location)
+    - If stream deck button 1 is pressed, turn on [Alice's](owner) hue lamp 
+    - If stream deck button 2 is pressed, switch off [Bob's](owner) hue lamp 
+    - Whenever stream deck button 3 is pressed, turn on [Alice's](owner) hue lamp 
+    - When stream deck button 4 is pushed, change color on [Bob's](owner) hue lamp to red
+    - If stream deck button 5 is pressed, turn on hue lamp in the [IoT lab](location)
+    - If stream deck button 6 is pressed, set power on hue lamp in the [meeting room](location)
+    - When stream deck button 1 is pushed, dim hue lamp in the [meeting room](location) to half brightness
+    - If stream deck button 2 is pressed, turn on hue lamp in the [IoT lab](location)
+    - When stream deck button 3 is pressed, dim hue lamp in the [meeting room](location)
+
+
+- intent: user_specify_device
+  examples: |
+    - the one in [office 4.443](location) 
+    - the one in [office 4.444](location)
+    - the one in the [IoT lab](location)
+    - the one in the [meeting room](location)
+    - the lamp in [office 4.443](location) 
+    - the lamp in [office 4.444](location)
+    - the lamp in the [IoT lab](location)
+    - the lamp in the [meeting room](location)
+    - the light in [office 4.443](location) 
+    - the light in [office 4.444](location)     
+    - the light in the [IoT lab](location)
+    - the light in the [meeting room](location)
+    - [Alice's](owner) lamp
+    - [Alice's](owner) light
+    - [Alice's](owner) 
+    - the lamp owned by [Alice](owner)
+    - the one owned by [Alice](owner)
+    - the one belongs to [Alice](owner)    
+    - [Bob's](owner) lamp
+    - [Bob's](owner) lamp
+    - [Bob's](owner)
+    - the one belongs to [Bob](owner)
+    - the one owned by [Bob](owner)
+    - the lamp owned by [Bob](owner)    
+
+- intent: query_device_number
+  examples: |
+   - how many lamps is in the building?
+   - how many lamps is in the room?
+   - how many lamps is in the 4th floor?
+   - how many lights is connected?
+
+
+- lookup: location
+  examples: |
+    - IoT lab
+    - meeting room
+    - office 4.443
+    - office 4.444
+
+
+- lookup: owner
+  examples: |
+    - Alice
+    - Bob
+
+- lookup: light
+  examples: |
+    - Philips Hue
+    - Govee lamp

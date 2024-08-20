@@ -1,0 +1,35 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.com/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:bob a foaf:Person ;
+    foaf:name "Bob" ;
+    foaf:knows :alice ;
+    :sitsIn :IoT_lab .
+
+:alice a foaf:Person ;
+    foaf:name "Alice" ;
+    foaf:knows :bob ;
+    :sitsIn :meeting_room .
+
+:IoT_lab a bot:Space, 
+            :Office ;
+    bot:containsElement <http://example.com/td/td0>,
+                         <http://example.com/td/td1> .
+
+:meeting_room a bot:Space, 
+            :Office ;
+    bot:containsElement <http://example.com/td/td2> .
+
+:Storey4 a bot:Storey ;
+         bot:hasSpace :IoT_lab ,
+                      :meeting_room .
+
+<http://example.com/td/td0> rdf:type :Controller ;
+                            :hasMacAddress "xxx" .
+<http://example.com/td/td1> rdf:type :Light ;
+                            :hasMacAddress "D4AA551E0F33" .
+<http://example.com/td/td2> rdf:type :Light ;
+                            :hasMacAddress "C895CFE240A0" .

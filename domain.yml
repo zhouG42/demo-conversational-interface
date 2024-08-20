@@ -1,0 +1,81 @@
+version: "3.1"
+
+intents:
+  - greet
+  - mood_great
+  - interact_with_general_device
+  - interact_with_specific_device
+  - user_specify_device
+  - query_device_number
+  - interact_with_connected_device
+
+
+entities:
+  - location
+  - owner
+  - light
+  # - color
+  # - powerState
+  # - buttonNumber
+  # - brightness
+  # - 
+
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+  owner:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: owner
+  
+  light:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: light
+
+  generated_code:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+actions:
+  - action_on_specific_device
+  - action_on_general_device
+  - action_on_connected_device
+  - action_search_for_number_of_devices_and_ask_which_one
+  - action_execusion_on_device
+
+responses:
+#   utter_ask_light_details:
+#     - text: "There are two Philips Hue lamps detected, which light do you want to turn on? You can specify a light by its location or owner."
+
+  
+  utter_greet:
+  - text: "Hi, how can I help you?"
+  
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://paul.ti.rw.fau.de/~on07uxug/funnycat.jpg"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  
+  utter_bad:
+  - text: "Sorry to hear that, I am sure it will get better!"
+
+  utter_goodbye:
+  - text: "Bye, see you next time!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

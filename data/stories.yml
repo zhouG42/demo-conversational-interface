@@ -1,0 +1,35 @@
+version: "3.1"
+stories:
+
+- story: interact with general device
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: interact_with_general_device
+  - action: action_search_for_number_of_devices_and_ask_which_one
+  - intent: user_specify_device
+  - action: action_on_general_device
+  - action: action_execusion_on_device
+
+  
+- story: interact with specific device
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: interact_with_specific_device
+  - action: action_on_specific_device
+  - action: action_execusion_on_device
+
+
+- story: interact with connected devices
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: interact_with_connected_device
+  - action: action_on_specific_device
+  - action: action_execusion_on_device
+
+# - story: ask how many device
+#   steps:
+#   - intent: query_device_number
+#   - action: action_search_for_number_of_devices_and_ask_which_one
