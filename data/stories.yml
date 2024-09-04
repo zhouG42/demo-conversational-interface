@@ -9,7 +9,7 @@ stories:
   - action: action_search_for_number_of_devices_and_ask_which_one
   - intent: user_specify_device
   - action: action_on_general_device
-  - action: action_execusion_on_device
+#  - action: action_execusion_on_device
 
   
 - story: interact with specific device
@@ -18,16 +18,17 @@ stories:
   - action: utter_greet
   - intent: interact_with_specific_device
   - action: action_on_specific_device
-  - action: action_execusion_on_device
+#  - action: action_execusion_on_device
 
 
-- story: interact with connected devices
+- story: TAP rules
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: set_TAP_rule
+  - action: utter_new_rule
   - intent: interact_with_connected_device
-  - action: action_on_specific_device
-  - action: action_execusion_on_device
+  - action: action_on_TAP_device
 
 # - story: ask how many device
 #   steps:

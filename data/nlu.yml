@@ -61,6 +61,52 @@ nlu:
     - see you next time
 
 
+- intent: interact_with_specific_device
+  examples: |
+    - I want to switch on the [Hue lamp](light) in the [IoT lab](location)
+    - Turn on the light in the [IoT lab](location)
+    - Turn on the [Philips Hue lamp](light) in the [IoT lab](location)
+    - Switch on the lamp in the [IoT lab](location)
+    - Please switch the light in the [IoT lab](location) on
+    - Can you turn the [Philips Hue lamp](light) in the [IoT lab](location) on?
+    - Switch off the [Philips Hue lamp](light) in the [IoT lab](location)
+    - Turn off the lamp in the [IoT lab](location)
+    - I want to switch on the light in the [meeting room](location)
+    - Turn on the [hue lamp](light) in the [meeting room](location)
+    - Turn on the [Philips Hue lamp](light) in the [meeting room](location)
+    - Switch on the light in the [meeting room](location)
+    - Please switch the light in the [meeting room](location) on
+    - Can you turn the [Philips Hue lamp](light) in the [meeting room](location) on?
+    - Switch off the light in the [meeting room](location) 
+    - Turn off light in the [meeting room](location)
+    - Change light in the [IoT lab](location) color to red
+    - Set [Philips Hue lamp](light) in the [IoT lab](location) color to green
+    - I want blue in [Philips Hue](light) in the [IoT lab](location)
+    - Make [Philips Hue lamp](light) in the [IoT lab](location) color orange
+    - Switch color to red in Philips Hue lamp in the [IoT lab](location)
+    - Change [Philips Hue lamp](light) in the [meeting room](location) color to red
+    - Set [Philips lamp](light) in the [meeting room](location) color to green
+    - I want blue in [Philips Hue](light) in the [meeting room](location)
+    - Make [Hue lamp](light) in the [meeting room](location) color orange
+    - Switch color to red in light in the meeting room](location)
+    - Dim light in the [meeting room](location) brightness to half
+    - Slowly decrease brightness of light in [meeting room](location) to half
+    - Dim [Philips Hue lamp](light) in the [meeting room](location) to half brightness 
+    - Dim [Philips Hue lamp](light) in the [meeting room](location) brightness to half
+    - Slowly decrease brightness of Philips Hue in [meeting room](location) to half
+    - Dim light in the [meeting room](location) to half brightness
+    - Switch off [Alice's](owner) [hue light](light)?
+    - Turn off [Bob's](owner) [hue light](light)?
+    - Turn on [Alice's](owner) [hue light](light)?
+    - Switch on [Bob's](owner) [hue light](light)?
+    - Turn off [Bob's](owner) [hue light](light)?
+    - Can you switch off [Alice's](owner) [hue light](light)?
+    - Can you turn off [Bob's](owner) [hue light](light)?
+    - Can you turn on [Alice's](owner) [hue light](light)?
+    - Can you switch on [Bob's](owner) [hue light](light)?
+    - Turn off [Bob's](owner) [hue light](light)?
+
+
 - intent: interact_with_general_device
   examples: |
     - I want to switch on the light
@@ -91,50 +137,30 @@ nlu:
     - Slowly decrease brightness to half
 
 
-- intent: interact_with_specific_device
+- intent: user_specify_device
   examples: |
-    - I want to switch on the Philips Hue lamp in the IoT lab
-    - Turn on the hue lamp in the IoT lab
-    - Turn on the Philips Hue lamp in the IoT lab
-    - Switch on the Philips Hue lamp in the IoT lab
-    - Please switch the Philips Hue lamp in the IoT lab on
-    - Can you turn the Philips Hue lamp in the IoT lab on?
-    - Switch off the Philips Hue lamp in the IoT lab
-    - Turn off the lamp in the IoT lab
-    - I want to switch on the Philips Hue lamp in the meeting room
-    - Turn on the hue lamp in the meeting room
-    - Turn on the Philips Hue lamp in the meeting room
-    - Switch on the Philips Hue lamp in the meeting room
-    - Please switch the Philips Hue lamp in the meeting room on
-    - Can you turn the Philips Hue lamp in the meeting room on?
-    - Switch off the Philips Hue lamp in the meeting room 
-    - Turn off Philips Hue lamp in the meeting room
-    - Change Philips Hue lamp in the IoT lab color to red
-    - Set Philips Hue lamp in the IoT lab color to green
-    - I want blue in Philips Hue in the IoT lab
-    - Make Philips Hue lamp in the IoT lab color orange
-    - Switch color to red in Philips Hue lamp in the IoT lab
-    - Change Philips Hue lamp in the meeting room color to red
-    - Set Philips Hue lamp in the meeting room color to green
-    - I want blue in Philips Hue in the meeting room
-    - Make Philips Hue lamp in the meeting room color orange
-    - Switch color to red in Philips Hue lamp in the meeting room
-    - Dim Philips Hue lamp in the meeting room brightness to half
-    - Slowly decrease brightness of Philips Hue in meeting room to half
-    - Dim Philips Hue in the meeting room to half brightness 
-    - Dim Philips Hue lamp in the meeting room brightness to half
-    - Slowly decrease brightness of Philips Hue in meeting room to half
-    - Dim Philips Hue in the meeting room to half brightness 
+    - the one in the [IoT lab](location)
+    - the one in the [meeting room](location)
+    - in the [IoT lab](location)
+    - in the [meeting room](location) 
+    - the light in the [IoT lab](location)
+    - the light in the [meeting room](location)
+    - [Alice's](owner) 
+    - the one owned by [Alice](owner)
+    - the one belongs to [Alice](owner)    
+    - [Bob's](owner)
+    - the one belongs to [Bob](owner)
+    - the one owned by [Bob](owner)
 
 
 - intent: interact_with_connected_device
   examples: |
-    - If stream deck button 1 is pressed, turn on hue lamp in the [IoT lab](location)
-    - When stream deck button 2 is pushed, switch on hue lamp in the [IoT lab](location)
-    - If stream deck button 3 is pressed, set color of hue lamp in the [IoT lab](location) to green
-    - Once stream deck button 4 is pressed, turn on hue lamp in the [meeting room](location)
-    - If stream deck button 5 is pushed, turn off hue lamp in the [meeting room](location)
-    - Whenever stream deck button 6 is pressed, turn on hue lamp in the [meeting room](location)
+    - If stream deck button zero is pressed, turn on hue lamp in the [IoT lab](location)
+    - When stream deck button zero is pushed, switch on hue lamp in the [IoT lab](location)
+    - If stream deck button zero is pressed, set color of hue lamp in the [IoT lab](location) to green
+    - Once stream deck button zero is pressed, turn on hue lamp in the [meeting room](location)
+    - If stream deck button zero is pushed, turn off hue lamp in the [meeting room](location)
+    - Whenever stream deck button zero is pressed, turn on hue lamp in the [meeting room](location)
     - If stream deck button 1 is pressed, turn on [Alice's](owner) hue lamp 
     - If stream deck button 2 is pressed, switch off [Bob's](owner) hue lamp 
     - Whenever stream deck button 3 is pressed, turn on [Alice's](owner) hue lamp 
@@ -146,32 +172,6 @@ nlu:
     - When stream deck button 3 is pressed, dim hue lamp in the [meeting room](location)
 
 
-- intent: user_specify_device
-  examples: |
-    - the one in [office 4.443](location) 
-    - the one in [office 4.444](location)
-    - the one in the [IoT lab](location)
-    - the one in the [meeting room](location)
-    - the lamp in [office 4.443](location) 
-    - the lamp in [office 4.444](location)
-    - the lamp in the [IoT lab](location)
-    - the lamp in the [meeting room](location)
-    - the light in [office 4.443](location) 
-    - the light in [office 4.444](location)     
-    - the light in the [IoT lab](location)
-    - the light in the [meeting room](location)
-    - [Alice's](owner) lamp
-    - [Alice's](owner) light
-    - [Alice's](owner) 
-    - the lamp owned by [Alice](owner)
-    - the one owned by [Alice](owner)
-    - the one belongs to [Alice](owner)    
-    - [Bob's](owner) lamp
-    - [Bob's](owner) lamp
-    - [Bob's](owner)
-    - the one belongs to [Bob](owner)
-    - the one owned by [Bob](owner)
-    - the lamp owned by [Bob](owner)    
 
 - intent: query_device_number
   examples: |
@@ -180,13 +180,22 @@ nlu:
    - how many lamps is in the 4th floor?
    - how many lights is connected?
 
+- intent: set_TAP_rule
+  examples: |
+   - I want to set a new automation rule.
+   - I want to set a new TAP rule.
+   - Set a new rule
+   - TAP rule
+   - rule
+
+
+
+
 
 - lookup: location
   examples: |
     - IoT lab
     - meeting room
-    - office 4.443
-    - office 4.444
 
 
 - lookup: owner
